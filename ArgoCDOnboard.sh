@@ -8,7 +8,6 @@ export Password=$2
 export ClearModule=$3
 export GitRepo=$4
 export Namespace=$5
-export repo=$6
 #export username=$6
 #export PAT=$7
 
@@ -40,7 +39,7 @@ ModuleExists=$(retry argocd app list | awk '{print $1}' | grep -iw "${ClearModul
 if [ -z "$ModuleExists" ]; then
   echo "$ClearModule doesn't exist, hence onboarding to ArgoCD"
   retry argocd app create "$ClearModule" \
-    --repo "$repo" \
+    --repo "$GitRepo" \
     --path "./$ClearModule" \
     --dest-server "https://kubernetes.default.svc" \
     --dest-namespace "$Namespace" \
