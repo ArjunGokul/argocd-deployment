@@ -12,7 +12,7 @@ spec:
     protocol: TCP
     targetPort: 8123
   selector:
-    app: sample-app-service
+    app: sample-app
   type: NodePort
 status:
   loadBalancer: {}
