@@ -22,7 +22,7 @@ spec:
       nodeSelector:
         kubernetes.io/os: linux
       containers:
-      - image: nagsg1996/devops-stuff:my-sample-app-main-28e1af3a-10-04-2026-035650-18
+      - image: nagsg1996/devops-stuff:my-sample-app-main-28e1af3a-10-04-2026-041146-20
         name: devops-stuff
         ports:
         - containerPort: 8123
