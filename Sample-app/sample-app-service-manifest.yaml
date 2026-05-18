@@ -3,7 +3,7 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: sample-app-service
+    app: sample-app
   name: sample-app-service
 spec:
   ports:
